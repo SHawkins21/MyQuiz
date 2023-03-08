@@ -1,6 +1,6 @@
 import {type NextPage } from 'next'
 import React from 'react'
-import { api } from "~/utils/api"; 
+import { api } from "../../utils/api"; 
 
 
 
@@ -19,15 +19,15 @@ const MyNote: NextPage = () => {
 return (
     <div>
           {
-        data?.map(({id,title, Categories,createdAt}) =>(
+        data?.map(({id,title, Catagories}) =>(
                 <div key={id}>
                     <h1>{title}</h1>
-                    <p> {new Date(createdAt).getFullYear()} </p>
+                    {/* <p> {new Date(createdAt).getFullYear()} </p> */}
                     {/* <h6>Category:{catagories}</h6> */}
                     
                     <p>
                         {
-                                Categories?.map(({title}) => (
+                                Catagories?.map(({title}) => (
 
                                     <p key={title}>{title}</p>
                                 ))

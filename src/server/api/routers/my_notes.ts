@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { protectedProcedure, 
-    createTRPCRouter } from "~/server/api/trpc"; 
+    createTRPCRouter } from '../trpc' 
 
 //Crud API 
 
@@ -12,7 +12,7 @@ export const myNoteRoute = createTRPCRouter({
             select:{
                 title:true,
                 id:true,
-                Categories:{
+                Catagories:{
                     select:{
                         title:true
                     }
